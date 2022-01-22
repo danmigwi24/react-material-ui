@@ -106,7 +106,7 @@ const NavBar = () => {
           >
             <Notifications />
           </Badge>
-          <Avatar alt="Remy Sharp" src="/public.profile-picture.jpg" />
+          <Avatar alt="Remy Sharp" src="/assets/profilepicture.jpg" />
         </div>
       </Toolbar>
     </AppBar>

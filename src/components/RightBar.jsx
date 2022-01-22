@@ -1,4 +1,5 @@
 import { Button, Container, makeStyles } from "@material-ui/core";
+import Posts from "./Posts";
 
 const useStyles = makeStyles(theme => ({
     container:{
@@ -7,14 +8,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const RightBar = () => {
-    const rightBarStyles=useStyles()
+    const feedStyles=useStyles()
     return (
-        <Container className={rightBarStyles.container}>
-          <div>
-            Right Bar
-        </div>  
+        <Container className={feedStyles.container}>
+        <Posts/> 
+        <Posts/> 
+        <Posts/> 
         </Container>
-        
     )
 }
 
