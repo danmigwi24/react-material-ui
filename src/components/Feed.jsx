@@ -1,21 +1,28 @@
-import { Button, Container, makeStyles } from "@material-ui/core";
+import { Button, Container, makeStyles, Typography } from "@material-ui/core";
 import Posts from "./Posts";
+import postDataList from "../data/post-data.json";
 
 const useStyles = makeStyles(theme => ({
-    container:{
-        paddingTop:theme.spacing(10)
-      }
+  container: {
+    paddingTop: theme.spacing(10)
+  }
 }));
 
-const Feed = () => {
-    const feedStyles=useStyles()
-    return (
-        <Container className={feedStyles.container}>
-        <Posts/> 
-        <Posts/> 
-        <Posts/> 
-        </Container>
-    )
-}
+const Feed = ({feedTitle}) => {
+  const feedStyles = useStyles();
 
-export default Feed
+  const getPosts = postList => {
+    return <Posts {...postList}/>;
+  };
+
+  return (
+    <Container className={feedStyles.container}>
+         <Typography gutterBottom variant="h5">
+          {feedTitle}
+          </Typography>
+        {postDataList.map(postItem=>getPosts(postItem))}
+    </Container>
+  );
+};
+
+export default Feed;

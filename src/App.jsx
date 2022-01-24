@@ -23,7 +23,7 @@ function App() {
           <LeftBar />
         </Grid>
         <Grid item sm={7} xs={10}>
-          <Feed />
+          <Feed feedTitle="13 reasons why girls are not in school" />
         </Grid>
         <Grid item sm={3} className={appStyles.rightBar}>
           <RightBar />
