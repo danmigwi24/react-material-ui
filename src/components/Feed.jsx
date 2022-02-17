@@ -4,23 +4,30 @@ import postDataList from "../data/post-data.json";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    paddingTop: theme.spacing(10)
+    padding: theme.spacing(10)
   }
 }));
 
-const Feed = ({feedTitle}) => {
-  const feedStyles = useStyles();
+const Feed = ({ feedTitle }) => {
+  const classes = useStyles();
 
-  const getPosts = postList => {
-    return <Posts {...postList}/>;
-  };
+  // const getPosts = postList => {
+  //   return <Posts {...postList} />;
+  // };
 
   return (
-    <Container className={feedStyles.container}>
-         <Typography gutterBottom variant="h5">
-          {feedTitle}
-          </Typography>
-        {postDataList.map(postItem=>getPosts(postItem))}
+    <Container className={classes.container}>
+      <Typography gutterBottom variant="h5">
+        {feedTitle}
+      </Typography>
+      {/* {postDataList.map(postList=>getPosts(postList))} */}
+      {postDataList.map(postList =>
+        <Posts
+          postTitle={postList.postTitle}
+          postDescription={postList.postDescription}
+          imageUrl={postList.imageUrl}
+        />
+      )}
     </Container>
   );
 };

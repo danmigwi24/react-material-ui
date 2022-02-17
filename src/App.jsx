@@ -19,15 +19,19 @@ function App() {
     <div>
       <NavBar />
       <Grid container className={appStyles.container}>
+        {/*  */}
         <Grid item sm={2} xs={2}>
           <LeftBar />
-        </Grid>
+        </Grid> 
+        {/*  */}
         <Grid item sm={7} xs={10}>
           <Feed feedTitle="13 reasons why girls are not in school" />
         </Grid>
+        {/*  */}
         <Grid item sm={3} className={appStyles.rightBar}>
           <RightBar />
         </Grid>
+        {/*  */}
       </Grid>
       <AddPost />
     </div>

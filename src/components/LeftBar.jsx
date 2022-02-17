@@ -46,32 +46,32 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const LeftBar = () => {
-  const leftBarStyles = useStyles();
+  const classes = useStyles();
   return (
-    <Container className={leftBarStyles.container}>
-      <div className={leftBarStyles.item}>
-        <Home className={leftBarStyles.icon} />
-        <Typography className={leftBarStyles.text}>Home Page</Typography>
+    <Container className={classes.container}>
+      <div className={classes.item}>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>Home Page</Typography>
       </div>
-      <div className={leftBarStyles.item}>
-        <Person className={leftBarStyles.icon} />
-        <Typography className={leftBarStyles.text}>Person</Typography>
+      <div className={classes.item}>
+        <Person className={classes.icon} />
+        <Typography className={classes.text}>Person</Typography>
       </div>
-      <div className={leftBarStyles.item}>
-        <List className={leftBarStyles.icon} />
-        <Typography className={leftBarStyles.text}>List</Typography>
+      <div className={classes.item}>
+        <List className={classes.icon} />
+        <Typography className={classes.text}>List</Typography>
       </div>
-      <div className={leftBarStyles.item}>
-        <PhotoCamera className={leftBarStyles.icon} />
-        <Typography className={leftBarStyles.text}>Camera</Typography>
+      <div className={classes.item}>
+        <PhotoCamera className={classes.icon} />
+        <Typography className={classes.text}>Camera</Typography>
       </div>
-      <div className={leftBarStyles.item}>
-        <PlayCircleOutline className={leftBarStyles.icon} />
-        <Typography className={leftBarStyles.text}>Video</Typography>
+      <div className={classes.item}>
+        <PlayCircleOutline className={classes.icon} />
+        <Typography className={classes.text}>Video</Typography>
       </div>
-      <div className={leftBarStyles.item}>
-        <TabletMac className={leftBarStyles.icon} />
-        <Typography className={leftBarStyles.text}>Apps</Typography>
+      <div className={classes.item}>
+        <TabletMac className={classes.icon} />
+        <Typography className={classes.text}>Apps</Typography>
       </div>
     </Container>
   );

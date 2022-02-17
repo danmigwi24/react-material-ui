@@ -39,8 +39,8 @@ const useStyles = makeStyles(theme => ({
     borderRadius: theme.shape.borderRadius,
     width: "50%",
     [theme.breakpoints.down("sm")]: {
-      display: (props) => (props.openSearch ? "flex" : "none"),
-      width:"70%"
+      display: props => (props.openSearch ? "flex" : "none"),
+      width: "70%"
     }
   },
   input: {
@@ -55,10 +55,10 @@ const useStyles = makeStyles(theme => ({
       display: "none"
     }
   },
-  cancelOpenSearch:{
+  cancelOpenSearch: {
     [theme.breakpoints.up("sm")]: {
-        display: "none",
-      }  
+      display: "none"
+    }
   },
   icons: {
     alignItems: "center",
@@ -84,8 +84,10 @@ const NavBar = () => {
         <div className={classStyles.search}>
           <Search />
           <InputBase className={classStyles.input} placeholder="Search" />
-          <Cancel className={classStyles.cancelOpenSearch} 
-          onClick={()=>setOpenSearch(false)}/>
+          <Cancel
+            className={classStyles.cancelOpenSearch}
+            onClick={() => setOpenSearch(false)}
+          />
         </div>
         <div className={classStyles.icons}>
           <Search
